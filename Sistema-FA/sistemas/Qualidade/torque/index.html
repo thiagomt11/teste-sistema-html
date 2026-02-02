@@ -50,42 +50,42 @@
         <hr id="separador-menu"/>
         <!-- Itens do menu lateral, para acessar o menu principal, estoque, menu de calibração, relatoório etc. -->
         <nav>
-            <a href="#" onclick="carregarConteudo('dashboard.html')">
+            <a href="#" onclick="carregarConteudo('dashboard.html'); return false;">
                 <div class="icon">
                     <span class="material-symbols-outlined">bar_chart</span>
                     <span>Dashboard</span>
                 </div>
             </a>
 
-            <a href="#" onclick="carregarConteudo('ferramentas.html')">
+            <a href="#" onclick="carregarConteudo('ferramentas.html'); return false;">
                 <div class="icon">
                     <span class="material-symbols-outlined">build</span>
                     <span>Controle de Ferramentas</span>
                 </div>
             </a>
             
-            <a href="#" onclick="carregarConteudo('atividades.html')">
+            <a href="#" onclick="carregarConteudo('atividades.html'); return false;">
                 <div class="icon">
                     <span class="material-symbols-outlined">Assignment</span>
                     <span>Atividades</span>
                 </div>
             </a>
 
-            <a href="#" onclick="carregarConteudo('relatorios.html')">
+            <a href="#" onclick="carregarConteudo('relatorios.html'); return false;">
                 <div class="icon">
                     <span class="material-symbols-outlined">Article</span>
                     <span>Relatórios</span>
                 </div>
             </a>
 
-            <a href="#" onclick="carregarConteudo('requisicoes.html')">
+            <a href="#" onclick="carregarConteudo('requisicoes.html'); return false;">
                 <div class="icon">
                     <span class="material-symbols-outlined">Attach_Money</span>
                     <span>Requisições de Compra</span>
                 </div>
             </a>
 
-            <a href="#" onclick="carregarConteudo('toolsnet.html')">
+            <a href="#" onclick="carregarConteudo('toolsnet.html'); return false;">
                 <div class="icon">
                     <span class="material-symbols-outlined">Database</span>
                     <span>ToolsNet</span>
@@ -108,6 +108,6 @@
         </main>
     </div>
     <!-- Importação do arquivo JavaScript principal -->
-    <script src="scripts/app.js"></script>
+    <script src="scripts/app.js" defer></script>
 </body>
 </html>

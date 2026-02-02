@@ -10,6 +10,7 @@
     height: 98vh;
     padding: 20px 30px 20px 45px;
     animation: aparecer 0.5s ease-out;
+    background-color: var(--fundo);
 }
 
 /*---------------- Header  ------------------*/
@@ -50,9 +51,9 @@
 }
 
 #btn-filtro-dashboard:hover{
-    color: white;
+    color: var(--branco);
     cursor: pointer;
-    background-color: rgb(31, 31, 255);
+    background-color: var(--destaque-secundario);
     transition: background-color 0.25s ease;
 }
 
@@ -62,9 +63,9 @@
     position: absolute;
     top: 110%; /* Fica logo abaixo do botão */
     right: 0;  /* Alinhado à direita do botão */
-    background-color: white;
-    border: 1px solid #ddd;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Sombra para dar profundidade */
+    background-color: var(--fundo-cards);
+    border: 1px solid var(--bordas);
+    box-shadow: 0 4px 12px rgba(var(--preto),0.15); /* Sombra para dar profundidade */
     border-radius: 8px;
     padding: 15px;
     width: 280px; /* Largura da janelinha */
@@ -121,8 +122,8 @@
 .cartao-dashboard{
     display: flex;
     flex-direction: column;
-    background-color: #ffffff;
-    border: 1px solid #292929;
+    background-color: var(--fundo-cards);
+    border: 1px solid var(--bordas);
     border-radius: 8px;
     padding: 15px;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
@@ -185,15 +186,15 @@
 #graficos-dashboard,
 #atividades-recentes-dashboard{
     height: 60vh;
-    background-color: #ffffff;
-    border: 1px solid #292929;
+    background-color: var(--fundo-cards);
+    border: 1px solid var(--bordas);
     border-radius: 8px;
     padding: 15px;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 1px 4px rgba(var(--preto), 0.15);
 }
 
 /*Removendo a bolinha antes dos itens de lista*/
-ul {
+#atividades-recentes-dashboard ul {
     list-style-type: none;
     padding-left: 0;
 }
@@ -208,8 +209,8 @@ ul {
   position: relative;
   min-height: 280px;
   border-radius: 12px;
-  border: 1px dashed rgba(0,0,0,.15);
-  background: linear-gradient(180deg, rgba(0,0,0,.02), rgba(0,0,0,.00));
+  border: 1px dashed rgba(var(--preto),.15);
+  background: linear-gradient(180deg, rgba(var(--preto),.02), rgba(var(--preto),.00));
   padding: 12px;
 }
 
@@ -220,7 +221,7 @@ ul {
   place-items: center;
   text-align: center;
   padding: 18px;
-  color: rgba(0,0,0,.6);
+  color: var(--cor-fonte-secundaria);
 }
 
 .grafico-empty p{
@@ -251,7 +252,7 @@ ul {
   padding-left: 18px;
   display: grid;
   gap: 8px;
-  color: rgba(0,0,0,.8);
+  color: rgba(var(--preto),.8);
 }
 
 .atividades-realizadas{
@@ -259,23 +260,24 @@ ul {
     flex-direction: column;
     gap: 1px;
     padding-bottom: 5px;
-    border-bottom: 1px solid rgba(0,0,0,.1); 
+    border-bottom: 1px solid rgba(var(--preto),.1); 
 }
 
 .acao-dash{
     overflow-wrap: anywhere;  /* quebra até em strings grandes */
     word-break: break-word;   /* fallback */
     white-space: normal;
+    color: var(--cor-fonte);
 }
 
 .data-dash{
     font-size: 0.75rem;
-    color: rgba(0,0,0,.5);
+    color: var(--cor-fonte-secundaria);
 }
 
 .usuario-dash{
     font-size: 0.75rem;
-    color: rgba(0,0,0,.5);
+    color: var(--cor-fonte-secundaria);
 }
 
 .ver-mais{
@@ -283,7 +285,7 @@ ul {
   margin-top: 10px;
   font-weight: 600;
   cursor: pointer;
-  color: #0b5ed7;
+  color: var(--destaque-secundario);
   padding-left: 18px;
 }
 

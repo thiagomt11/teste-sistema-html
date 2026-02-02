@@ -11,7 +11,7 @@ Dispositivos até 480px (celulares pequenos)
     flex-direction: row;
     align-items: center;
     gap: 4px;
-    border: 1px solid var(----cor-fonte-secundaria);
+    border: 1px solid var(--cor-fonte-secundaria);
     border-radius: 8px;
     padding: 2px;
     margin: auto;

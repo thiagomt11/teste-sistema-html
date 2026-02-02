@@ -1,43 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
-:root {
-  /* MODO CLARO */
-  --fundo: #f0f0f0;
-  --fundo-cards: #fafafa;
-  --destaque: #2F3CED;
-  --destaque-secundario: #3249FA;
-  --cor-fonte: #292929;
-  --cor-fonte-secundaria: #707070;
-  --bordas:#CCCCCC;
-  --preto:rgba(0,0,0);
-  --branco: rgba(255,255,255);
-}
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-body {
-  display: grid;
-  grid-template-columns: 5vw repeat(3, 1fr) 5vw;
-  grid-template-rows: 15dvh 1fr;
-  font-family: "Inter", Sans-Serif;
-  background-color: var(--fundo);
-}
-
-body,
-html {
-  height: 100vh;
-}
-
-header {
-  grid-column: 2 / -2;
-  grid-row: 1 / -2;
-  margin-top: 10px;
-}
-
 #cabecalho {
   display: flex;
   flex-direction: column;
@@ -59,10 +21,10 @@ header {
   background-color: var(--branco);
   padding: 15px;
   text-align: center;
-  color: #2F3CED;
+  color: var(--destaque-secundario);
   font-weight: bold;
   border-radius: 8px;
-  border: 1.5px solid #2F3CED;
+  border: 1.5px solid var(--destaque-secundario);
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -79,11 +41,11 @@ header {
 }
 
 #btn-adc-atividade:hover {
-  background-color: #0700cf;
+  background-color: var(--destaque);
 }
 
 #btn-historico:hover {
-  background-color: #292929;
+  background-color: var(--cor-fonte);
 }
 
 #box-filtro-historico {
