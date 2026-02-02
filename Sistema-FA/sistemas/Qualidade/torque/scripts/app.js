@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function() {
         carregarConteudo(paginaSalva);
     } else {
         // Se é a primeira vez, carrega o Dashboard padrão
-        carregarConteudo('dashboard.cfm');
+        carregarConteudo('dashboard.html');
     }
 });
 

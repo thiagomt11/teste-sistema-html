@@ -50,42 +50,42 @@
         <hr id="separador-menu"/>
         <!-- Itens do menu lateral, para acessar o menu principal, estoque, menu de calibração, relatoório etc. -->
         <nav>
-            <a href="#" onclick="carregarConteudo('dashboard.cfm')">
+            <a href="#" onclick="carregarConteudo('dashboard.html')">
                 <div class="icon">
                     <span class="material-symbols-outlined">bar_chart</span>
                     <span>Dashboard</span>
                 </div>
             </a>
 
-            <a href="#" onclick="carregarConteudo('ferramentas.cfm')">
+            <a href="#" onclick="carregarConteudo('ferramentas.html')">
                 <div class="icon">
                     <span class="material-symbols-outlined">build</span>
                     <span>Controle de Ferramentas</span>
                 </div>
             </a>
             
-            <a href="#" onclick="carregarConteudo('monitorias.cfm')">
+            <a href="#" onclick="carregarConteudo('monitorias.html')">
                 <div class="icon">
                     <span class="material-symbols-outlined">Assignment</span>
                     <span>Monitorias</span>
                 </div>
             </a>
 
-            <a href="#" onclick="carregarConteudo('relatorios.cfm')">
+            <a href="#" onclick="carregarConteudo('relatorios.html')">
                 <div class="icon">
                     <span class="material-symbols-outlined">Article</span>
                     <span>Relatórios</span>
                 </div>
             </a>
 
-            <a href="#" onclick="carregarConteudo('requisicoes.cfm')">
+            <a href="#" onclick="carregarConteudo('requisicoes.html')">
                 <div class="icon">
                     <span class="material-symbols-outlined">Attach_Money</span>
                     <span>Requisições de Compra</span>
                 </div>
             </a>
 
-            <a href="#" onclick="carregarConteudo('toolsnet.cfm')">
+            <a href="#" onclick="carregarConteudo('toolsnet.html')">
                 <div class="icon">
                     <span class="material-symbols-outlined">Database</span>
                     <span>ToolsNet</span>
@@ -101,10 +101,20 @@
             <button type="button" id="btn-menu" onclick="abrirMenu()">
                 <span class="material-symbols-outlined">menu</span>
             </button>
+
+            <div class="search-box">
+                <label for="search-serial"><span class="material-symbols-outlined" id="logo-search">search</span></label>
+                <hr style="width:1px; height:20px; display:inline-block;"/>
+                <input type="search" placeholder="Digite o serial da ferramenta..." id="search-serial" name="search-serial" />
+            </div>
         </header>
         
         <!-- Codigo Principal - Todo o conteudo do dashboard (outras paginas serao em outros arquivos .html) -->
         <main id="conteudo-dinamico">
+            <section>
+                <h2>Teste</h2>
+                <p>Aqui entrarão as páginas, cards, tabelas, etc.</p>
+            </section>
         </main>
     </div>
     <!-- Importação do arquivo JavaScript principal -->
