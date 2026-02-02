@@ -1,0 +1,250 @@
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f1f1f1;
+    animation: aparecer 0.5s ease-out;
+}
+
+header{
+    background-color: #00005A;
+    margin: 0;
+    padding: 1px;
+    box-shadow: 2px 1px 8px rgba(0, 0, 0, 0.4);
+}
+
+#header-wid{
+    max-width: 70%;
+    margin: 0 auto;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#header-wid ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #00005A;
+}
+
+#logo-usuario{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: bold;
+    padding: 5px 7px 5px 5px;
+    border: 1px solid #00005A;
+}
+
+#logo-usuario:hover{
+    cursor: pointer;
+    border: 1px solid #0000ac;
+    border-radius: 20px;
+    background-color: #00007a;
+}
+
+#username{
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    font: normal 16px 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 3px;
+}   
+
+#nome{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#funcao{
+    color: #e9e9e9;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+#logo-usuario img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+#options-header{
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+menu{
+    display: none;
+}
+
+#itens{
+    background-color: white;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: calc(3.7em + 10px);
+    padding: 0;
+    border-radius: 5px;
+    margin: 0;
+    border: 1px solid whitesmoke;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+    opacity: 0;
+    transform: translateY(-10px);
+    visibility: hidden;
+    transition: opacity 0.17s ease, transform 0.25s ease;
+}
+
+#itens.ativo {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+#itens div{
+    padding: 8px 37px;
+    background-color: white;
+    font-size: 1.1em;
+    border-radius: 10px;
+}
+
+#itens div a{
+    text-decoration: none;
+    color: black;
+    font-weight: normal;
+}
+
+#itens div:hover{
+    background-color: #f3f3f3;
+    border-radius: 0px;
+}
+
+#itens span{
+    vertical-align: top;
+}
+
+.txt-itens{
+    padding: 0px 0;
+    cursor: pointer;
+}
+
+#logout a:hover{
+    color: red;
+    transition: 0.2s;
+}
+
+header > h1{
+    font-size: 25px;
+    font-weight: bolder;
+    display: flex;
+}
+
+main{
+    padding-bottom: 20px;
+}
+
+#title-main{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 70%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#title-main > h1, #title-main > p{
+    margin: 0;
+}
+
+#title-main > p {
+    color: rgb(71, 71, 71);
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+    max-width: 70%; 
+    margin: 0 auto;
+}
+
+.card-link{
+  text-decoration: none;
+  color: inherit;
+  display: block; /* garante que o link “abrace” o card */
+}
+
+
+.card{
+    background-color: #F6F6F6;
+    border-radius: 10px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    box-shadow: 0 4px 6px -2px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+    border-top: 7px solid #00005A;
+}
+
+.card:hover{
+    transform: translateY(-5px);
+    cursor: pointer;
+    box-shadow: 0 8px 6px -2px rgba(0,0,0,0.2);
+}
+
+.card > img{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.card-content{
+    display: flex;
+    flex-direction: column;
+    padding: 5px 5px 10px 15px;
+    margin: 0;
+    gap: 1px;
+}
+
+.card-content > h2{
+    margin: 0;
+}
+
+.card-content > p{
+    margin: 0;
+}
+
+#img-custos{
+    background-size: cover;
+    background-position: 100px;
+}
+
+@media (max-width: 900px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}

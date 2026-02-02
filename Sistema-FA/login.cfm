@@ -1,0 +1,42 @@
+<cfprocessingdirective pageEncoding="utf-8">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Assembly</title>
+    <link rel="stylesheet" href="styles/login/style.css">
+    <link rel="stylesheet" href="styles/login/mediaqueries.css">
+</head>
+<body>
+    <main>
+        <article>
+
+        </article>
+        
+        <section>
+            
+            <div id="login">
+                <div id="title">
+                    <h1>Final Assembly</h1>
+                    <p>Sistema de gestão - Trim Shop</p>
+                </div>
+                
+                <form action="index.cfm" method="post">
+                    <div id="usuario">
+                        <label>Usuário</label>
+                        <input type="text" name="username" placeholder="Digite seu usuário"  class="input-box">
+                    </div>
+                    <div id="senha">
+                        <label>Senha</label>
+                        <input type="password" name="password" placeholder="Digite sua senha"  class="input-box">
+                    </div>
+                
+                    <button type="submit" id="btn-login">Entrar</button>
+                </form>
+            </div>
+
+        </section>
+    </main>
+</body>
+</html>

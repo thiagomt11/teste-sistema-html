@@ -1,0 +1,225 @@
+@charset "UTF-8";
+
+/*
+Todos os estilos gerais do sistema
+*/
+
+
+/*Importação de Fonte Principal*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* Variaveis de cores*/
+:root{
+    --fonte-principal: 'Inter', sans-serif;
+    --azul-escuro: #00005A;
+    --azul-secundario: #0000bb;
+    --azul-terciario: rgba(29, 29, 87, 0.2);
+    --cinza-fonte: #414141;
+    --cinza-claro: #cacaca;
+}
+
+/* Transição para aparecer na tela ao atulizar/abrir */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*Reset e Configurações gerais*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fonte-principal);
+}
+
+body{
+    display: flex;
+    flex-direction: row;
+    animation: aparecer 0.4s ease-in-out;
+    overflow-x: hidden;
+    background-color: rgba(202, 231, 250, 0.147);
+}
+
+/* Menu lateral */
+#menu-lateral{
+    width: 220px;
+    height: 100vh;
+    background-color: #fafafa;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.25);
+
+    /*I.A*/
+    transition: width 0.45s ease-in-out; /* Animação suave de 0.45 segundos */
+    overflow: hidden;            /* Esconde o texto/ícones quando o menu encolher */
+    white-space: nowrap;         /* Impede que o texto quebre linha ao encolher */
+
+    /* Deixe de usar relative e use fixed */
+    position: fixed; 
+    top: 0;
+    left: 0;
+    
+    /* Z-index alto garante que ele fique na frente de tudo (tabelas, textos, imagens) */
+    z-index: 1000;
+    
+}
+
+.menu-oculto {
+    width: 0 !important; /* Força a largura a ser 0 */
+    padding: 0 !important; /* Remove preenchimento se houver */
+    border: none; /* Remove bordas para sumir completamente */
+}
+
+
+/* Cabeçalho do menu lateral (Foto e nome) */
+#cabecalho-menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+#cabecalho-menu > a{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+
+#foto-usuario{
+    margin-top: 10px;
+    width: 45%;
+    height: auto;
+    border-radius: 50%;
+}
+
+#nome{
+    font-weight: bold;
+    font-size: 1.15em;
+    text-align: center;
+}
+
+#funcao{
+    font-weight: normal;
+    font-size: 0.75em;
+    text-align: center;
+    color: var(--cinza-fonte);
+}
+
+#separador-menu{
+    width:98%; 
+    color:black; 
+    height:1px;
+    text-align: center;
+    margin: 0 auto;
+}
+/* Navegação do menu lateral - itens abaixo do cabeçalho */
+
+#menu-lateral > nav{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 5px;
+}
+
+#menu-lateral > nav a{
+    display: block;
+    margin: 2px auto;
+    width: 96%;
+    padding: 8px;
+    text-decoration: none;
+    color: var(--cinza-fonte);
+    font-weight: bold;
+    transition: background-color 0.45s ease;
+}
+
+#menu-lateral > nav a:hover{
+    background-color: var(--azul-terciario);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-right: 2px solid var(--azul-secundario);
+}
+
+#menu-lateral > nav a:focus{
+    color: var(--azul-secundario);
+    background-color: var(--azul-terciario);
+    border-right: 2px solid var(--azul-secundario);
+}
+
+.icon{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3px;
+    font-size: 0.9em;
+}
+
+/* Conteúdo principal */
+
+#principal{
+    margin: 0;
+    
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    min-height: 100vh; 
+
+    width: auto; 
+    min-width: 0;
+    flex: 1;
+    transition: filter 0.3s ease;
+    background-color: rgba(202, 231, 250, 0.147);
+}
+
+body.menu-aberto #principal{
+    filter: blur(5px);
+}
+/* Cabeçalho principal (barra de pesquisa e botão do menu lateral) */
+
+#btn-menu{
+    font-size: 1.5em;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#cabecalho-principal{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    background-color: transparent;
+}
+
+#search-serial{
+    font-size: 0.8em;
+    border: none;
+    padding: 8px;
+    width: 100%;
+}
+
+hr{
+    width:1px; 
+    height:20px; 
+    display:inline-block;
+}
+
+#search-serial:focus{
+    outline: none;
+}
+
+#logo-search{
+    font-size: 1.2em;
+    color: var(--cinza-fonte);
+    padding-left: 4px;
+}
+
+@media (max-height:620px){
+    #principal{
+        max-height: 90vh;
+    }
+}

@@ -1,0 +1,154 @@
+@charset "UTF-8";
+
+/* Container Principal com animação de entrada */
+#container {
+    padding: 20px;
+    animation: aparecer 0.5s ease-out;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.search-box{
+    display: none;
+}
+
+/* Cabeçalho do Módulo */
+.content-header {
+    margin-bottom: 30px;
+    border-bottom: 1px solid var(--cinza-claro, #cacaca);
+    padding-bottom: 10px;
+}
+
+.content-header h1 {
+    color: var(--azul-escuro, #00005A);
+    font-size: 1.8rem;
+}
+
+.subtitle {
+    color: var(--cinza-fonte, #414141);
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+/* Grid Layout */
+.options-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr)); /* 3 caixas em cima */
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.options-grid > .option-card:last-child:nth-child(3n + 1) {
+  grid-column: 1 / -1;
+}
+
+/* Estilo dos Cards */
+.option-card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 25px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 220px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+/* Efeito Hover nos Cards */
+.option-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 90, 0.15);
+    border-color: var(--azul-secundario, #0000bb);
+}
+
+/* Detalhe visual na borda esquerda */
+.option-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 5px;
+    background-color: var(--azul-escuro, #00005A);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.option-card:hover::before {
+    opacity: 1;
+}
+
+/* Ícones */
+.ferr-icon {
+    background-color: var(--azul-terciario, rgba(0, 0, 0, 0.1));
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.ferr-icon .material-symbols-outlined {
+    font-size: 32px;
+    color: var(--azul-escuro, #00005A);
+}
+
+/* Textos do Card */
+.card-info h2 {
+    font-size: 1.4rem;
+    color: var(--azul-escuro, #00005A);
+    margin-bottom: 8px;
+}
+
+.card-info p {
+    font-size: 0.9rem;
+    color: var(--cinza-fonte, #666);
+    line-height: 1.5;
+}
+
+/* Rodapé do Card (Link fake) */
+.card-action {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--azul-secundario, #0000bb);
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.card-action .material-symbols-outlined {
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}
+
+.option-card:hover .card-action .material-symbols-outlined {
+    transform: translateX(5px);
+}
+
+/* Responsividade */
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    .options-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .options-grid > .option-card:last-child:nth-child(3n + 1) {
+        grid-column: auto;
+    }
+}
+
+@media (max-width: 768px) {
+  .options-grid {
+    grid-template-columns: 1fr;
+  }
+  .options-grid > .option-card {
+    grid-column: auto;
+  }
+}

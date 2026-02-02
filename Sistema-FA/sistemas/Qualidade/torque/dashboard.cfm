@@ -1,0 +1,143 @@
+<cfprocessingdirective pageEncoding="utf-8">
+
+<div id="dashboard-operacional">
+    <header>
+        <div id="titulo-dashboard">
+            <h1>Dashboard Operacional</h1>
+            <p class="subtitle">Visão geral do status de estoque, calibração e outras operações de torque</p>
+        </div>
+    
+        <div id="filtros-dashboard">
+            <div id="btn-filtro-dashboard" onclick="alternarFiltroDashboard()">
+                <button type="button" class="icon-filtro-dashboard">
+                    <span class="material-symbols-outlined">Filter_List</span>
+                </button>
+                <span>Filtros</span>
+            </div>
+    
+            <section id="conteudo-btn-filtro">
+                <div class="filtro-item">
+                    <label for="filtro-periodo">Período:</label>
+                    <select id="filtro-periodo" name="filtro-periodo">
+                        <option value="hoje">Hoje</option>
+                        <option value="semana">Esta Semana</option>
+                        <option value="mes">Este Mês</option>
+                        <option value="ano">Este Ano</option>
+                    </select>
+                </div>
+    
+                <div class="filtro-item">
+                    <label for="filtro-departamento">Departamento:</label>
+                    <select id="filtro-departamento" name="filtro-departamento">
+                        <option value="todos">Todos</option>
+                        <option value="manutencao">Manutenção</option>
+                        <option value="produçao">Produção</option>
+                        <option value="qualidade">Qualidade</option>
+                    </select>
+                </div>
+    
+                <div class="filtro-item">
+                    <label for="filtro-tipo-ferramenta">Tipo de Ferramenta:</label>
+                    <select id="filtro-tipo-ferramenta" name="filtro-tipo-ferramenta">
+                        <option value="todos">Todos</option>
+                        <option value="torquimetros">Torquímetros</option>
+                        <option value="shut-off">Apertadeiras Shut-Off</option>
+                        <option value="eletronicas">Apertadeiras Eletrônicas</option>
+                        <option value="outros">Outros</option>
+                    </select>
+                </div>
+            </section>
+        </div>
+    </header>
+    
+    <main id="conteudo-dashboard">
+        
+        <article id="cartoes-dashboard">
+
+            <section class="cartao-dashboard">
+                <h2>Total de Ferramentas</h2>
+                <div class="conteudo-cartao">
+                    <p>4510</p>
+                    <span>unidades</span>
+                </div>
+            </section>
+
+            <section class="cartao-dashboard">
+                <h2>Qtd. Estoque</h2>
+                <div class="conteudo-cartao">
+                    <p>1.250</p>
+                    <span>unidades</span>
+                </div>
+            </section>
+
+            <section class="cartao-dashboard">
+                <h2>Linha de Produção</h2>
+                <div class="conteudo-cartao">
+                    <p>750</p>
+                    <span>unidades</span>
+                </div>
+            </section>
+
+            <section class="cartao-dashboard">
+                <h2>Pendentes de Calibração</h2>
+                <div class="conteudo-cartao">
+                    <p>40</p>
+                    <span>unidades</span>
+                </div>
+            </section>
+        </article>
+    
+        <article id="graficos-e-atividades-recentes">
+            <section id="graficos-dashboard">
+                <h2>Ferramentas calibradas no Período</h2>
+
+                <div class="grafico-placeholder">
+                <!-- Estado vazio (quando ainda não tiver dados) -->
+                    <div class="grafico-empty" id="graficoEmpty">
+                        <p>Sem dados para exibir no período selecionado.</p>
+                    </div>
+
+                    <!-- Canvas do gráfico -->
+                    <div class="grafico-canvas-wrap">
+                        <canvas id="graficoCalibracoes" aria-label="Gráfico de ferramentas calibradas no período" role="img"></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <section id="atividades-recentes-dashboard">
+                <h2>Atividades Recentes</h2>
+                <ul class="lista-atividade-recente">
+                    <li class="atividades-realizadas">
+                        <span class="acao-dash">Ferramenta 256987J calibrada.</span>
+                        <span class="data-dash">07 de janeiro de 2026 às 14:20:21</span>
+                        <span class="usuario-dash">Rian Guilherme</span>
+                    </li>
+
+                    <li class="atividades-realizadas">
+                        <span class="acao-dash">Operação pré aperto das rodas na estação C-14 concluída.</span>
+                        <span class="data-dash">11 de junho de 2025 às 00:07:38</span>
+                        <span class="usuario-dash">Paulo Fernando</span>
+
+                    </li>
+                    <li class="atividades-realizadas"> 
+                        <span class="acao-dash">Ferramenta PE1020123 enviada para manutenção.</span>
+                        <span class="data-dash">12 de junho de 2025 às 16:15:00</span>
+                        <span class="usuario-dash">Maycon Douglas</span>
+
+                    </li>
+                    <li class="atividades-realizadas">
+                        <span class="acao-dash">Novo lote de torquímetros QSP50N3 da fabricante tochinni recebido.</span>
+                        <span class="data-dash">13 de junho de 2025 às 09:30:00</span>
+                        <span class="usuario-dash">Eduardo Almeida</span>
+                    </li>
+                    <li class="atividades-realizadas">
+                        <span class="acao-dash">Relatório mensal de calibração gerado.</span>
+                        <span class="data-dash">03 de dezembro de 2025 às 08:10:00</span>
+                        <span class="usuario-dash">Pedro Antônio</span>
+                    </li>
+                </ul>
+                <span class="ver-mais" role="button" tabindex="0">Ver mais</span>
+            </section>
+        </article>
+    </main>
+</div>

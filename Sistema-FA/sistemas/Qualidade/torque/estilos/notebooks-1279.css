@@ -1,0 +1,42 @@
+@charset "UTF-8";
+ 
+ /* 
+ Notebook styles - Para telas entre 992px e 1279px
+ */
+
+.search-box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+    border: 1px solid var(--cinza-claro);
+    border-radius: 8px;
+    padding: 2px;
+    margin: auto;
+    width: 45%;
+}
+
+
+/* Deixar menu lateral fixo*/
+#menu-lateral {
+    width: 230px !important;
+    position: fixed;
+    left: 0;
+}
+
+#btn-fechar {
+    display: none;
+}
+
+#principal {
+    margin-left: 240px;
+}
+
+#btn-menu, #btn-fechar{
+    display: none;
+}
+
+/*Tira o blur*/
+#principal {
+    filter: none !important;
+  }

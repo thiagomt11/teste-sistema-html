@@ -1,0 +1,73 @@
+@charset "UTF-8";
+ 
+ /* 
+ Desktop styles - Para telas maiores que 1280px
+ */
+
+.search-box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+    border: 1px solid var(--cinza-claro);
+    border-radius: 8px;
+    padding: 2px;
+    margin: auto;
+    width: 45%;
+}
+
+/* Deixar menu lateral fixo*/
+#menu-lateral {
+    width: 300px !important;
+    position: fixed;
+    left: 0;
+}
+
+#btn-fechar {
+    display: none;
+}
+
+#principal {
+    margin-left: 310px;
+    background-color: rgba(202, 231, 250, 0.147);
+}
+
+#btn-menu {
+    display: none;
+}
+
+/*Tira o blur*/
+#principal {
+    filter: none !important;
+    background-color: rgba(202, 231, 250, 0.147);
+  }
+
+/*Aumenta o tamanho dos ícones e textos do menu lateral abaixo do cabeçalho*/
+.icon{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+    font-size: 1.1em;
+}
+
+/*Aumenta o tamanho da foto e do nome/função do usuário*/
+#foto-usuario{
+    margin-top: 10px;
+    width: 50%;
+    height: auto;
+    border-radius: 50%;
+}
+
+#nome{
+    font-weight: bold;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+#funcao{
+    font-weight: normal;
+    font-size: 0.85em;
+    text-align: center;
+    color: var(--cinza-fonte);
+}

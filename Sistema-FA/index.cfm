@@ -1,0 +1,129 @@
+<cfprocessingdirective pageEncoding="utf-8">
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão Final Assembly</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    
+</head>
+<body onresize="mudouTamanho()">
+    <header>
+        <div id="header-wid">
+            <h1>Gestão Final Assembly</h1>
+            
+            <div id="options-header">
+                
+                <div id="logo-usuario" onclick="clickMenu()">
+                    <img src="https://github.com/shadcn.png" alt="Imagem Usuario">
+                    <div id="username">
+                        <a href="#" id="nome">Thiago Martins</a>
+                        <a href="#" id="funcao">Assistente de Processos</a>
+                    </div>
+                </div>
+            
+                <menu id="itens">
+                    <div class="txt-itens">
+                        <a href="#"><span class="material-symbols-outlined">person</span>Editar Perfil</a>
+                    </div>
+
+                    <div class="txt-itens">
+                        <a href="#"><span class="material-symbols-outlined">settings</span>Configurações</a>
+                    </div>
+
+                    <div class="txt-itens" id="logout">
+                        <a href="login.html"><span class="material-symbols-outlined">logout</span>Sair</a>
+                    </div>
+                </menu>
+            </div> 
+        </div>
+    </header>
+
+    <main>
+        <div id="title-main">
+            <h1>Sistemas FA</h1>
+            <p> Selecione um sistema para acessar as ferramentas de gestão do setor Trim Shop</p>
+        </div>
+
+        
+        <div class="container">
+            <section id="pessoas" class="card">
+                <img src="imagens/img-pessoas.jpeg" alt="imagem pessoas">
+                <div class="card-content">
+                    <h2>Pessoas</h2>
+                    <p>Controle de faltas, absenteísmo, gestão de equipes e desenvolvimento</p>
+                </div>
+            </section>
+
+            <section id="seguranca" class="card">
+                <img src="imagens/img-seguranca.jpeg" alt="imagem segurança">
+                <div class="card-content">
+                    <h2>Segurança</h2>
+                    <p>Acompanhamento de acidentes ACA, ASA N1 e N2, controle de segurança</p>
+                </div>
+            </section>
+
+            <section id="meio-ambiente" class="card">
+                <img src="imagens/img-meio-ambiente.jpeg" alt="imagem meio ambiente">
+                <div class="card-content">
+                    <h2>Meio Ambiente</h2>
+                    <p>ICA (Índice de controle ambiental), gestão de impactos ambientais</p>
+                </div>
+            </section>
+
+            <a class= "card-link" onclick="carregarConteudo('menu_qualidade.cfm')">
+                <section id="qualidade" class="card">
+                    <img src="imagens/img-qualidade.jpeg" alt="imagem qualidade">
+                    <div class="card-content">
+                        <h2>Qualidade</h2>
+                        <p>Gestão de qualidade, controle de defeitos/avarias e melhoria contínua</p>
+                    </div>
+                </section>
+            </a>
+
+            <section id="entrega" class="card">
+                <img src="imagens/img-entrega.jpeg" alt="imagem entrega">
+                <div class="card-content">
+                    <h2>Entrega</h2>
+                    <p>Controle de produção, Takt Time e Paradas de linha </p>
+                </div>
+            </section>
+
+            <section id="custos" class="card">
+                <img src="imagens/img-custos.jpeg" alt="imagem custos">
+                <div class="card-content">
+                    <h2>Custos</h2>
+                    <p>Refugo, chamado controlado, sub componentes e evolução de refugo</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script>
+        const itens = document.getElementById('itens')
+
+        // Garante que o menu sempre inicie fechado
+        function fecharMenu() {
+            itens.classList.remove('ativo')
+        }
+
+        function mudouTamanho() {
+            // Ao redimensionar, sempre fecha o menu
+            fecharMenu()
+        }
+
+        function clickMenu() {
+            itens.classList.toggle('ativo')
+        }
+
+        window.addEventListener('resize', mudouTamanho)
+        window.addEventListener('load', fecharMenu)
+    </script>
+
+
+</body>
+</html>

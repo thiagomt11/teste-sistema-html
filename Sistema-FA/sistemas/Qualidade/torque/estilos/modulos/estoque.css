@@ -1,0 +1,242 @@
+
+/* Container Principal */
+.pagina-ferramentas {
+    padding: 20px;
+    animation: aparecer 0.5s ease-out;
+}
+
+/* --------------------------- HEADER ----------------------------*/
+/*-----Titulo e subtitulo-----*/
+.titulo-estoque {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.titulo-estoque h2 {
+    margin: 0;
+    color: #333;
+}
+
+.subtitulo-estoque{
+    color: #666;
+    font-size: 14px;
+}
+
+
+/*-----Filtros-----*/
+/*Div geral de filtros e botão de adicionar*/
+.filtros-estoque{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*Input de busca serial*/
+#logo-search-estoque{
+    color: #888;
+    font-size: 18px;
+    vertical-align: middle;
+    margin: auto;
+}
+
+.input-filtrar-estoque{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 370px;
+    padding: 3px 3px 3px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+
+}
+
+#search-serial-estoque{
+    width: 300px;
+    padding: 10px 10px 10px 7px;
+    font-size: 1em;
+    border: none;
+    background-color: transparent;
+}
+
+#search-serial-estoque:focus{
+    outline: none;
+}
+
+/*Botões de filtro e adicionar ferramenta*/
+.filtro-e-add-estoque{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+
+#filtros-avancados-estoque {
+    position: relative;
+    display: inline-block;
+}
+
+/*Div com botao de filtros dashboard e texto*/
+#btn-filtro-estoque{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+    color: var(--cinza-fonte);
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 6px 13px;
+    background-color: var(--azul-secundario);
+    color: white;
+}
+
+/*Botao filtro dashboard*/
+.icon-filtro-estoque{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-weight: bolder;
+}
+
+#btn-filtro-estoque:hover{
+    color: white;
+    cursor: pointer;
+    background-color: rgb(31, 31, 255);
+    transition: background-color 0.25s ease;
+}
+
+/*Conteúdo dentro do btn-filtro-estoque (menu de filtros avançados)*/
+
+#conteudo-btn-filtro-estoque{
+    display: none;
+    animation: fadeOut 0.35s ease-out;
+}
+
+.filtro-item-estoque {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.filtro-item-estoque label {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.filtro-item-estoque select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+/* Classe que vai ser ativada via JS para mostrar o menu */
+#conteudo-btn-filtro-estoque.ativo {
+    display: flex;
+    align-items: flex-end;
+    gap: 100px;
+
+    width: 100%;
+    margin-top: 14px;
+    padding: 14px 16px;
+
+    background: #f1f1f1;   /* ajuste pro seu tema */
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+
+    /* MUITO IMPORTANTE: nada de absolute aqui */
+    position: static;
+
+    animation: fadeIn 0.35s ease-out;
+}
+
+
+
+.btn-adicionar-estoque {
+    background-color: var(--azul-secundario);
+    color: white;
+    border: none;
+    padding: 6px 13px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 1em;
+}
+
+.btn-adicionar-estoque:hover {
+    background-color: rgb(31, 31, 255);
+}
+
+/* --------------------------- MAIN ----------------------------*/
+
+/*---------- Tabela ---------*/
+
+.tabela-estoque {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.tabela-estoque tr{
+    box-sizing: border-box;
+}
+
+.tabela-estoque th, .tabela-estoque td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+}
+
+.tabela-estoque th {
+    background-color: #f1f1f1;
+    font-weight: 600;
+}
+
+
+.tag.disponivel {
+    background: #d4edda;
+    color: #155724;
+}
+
+.col-acoes > button{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 2px;
+}
+
+.col-acoes > button:hover{
+    background-color: #f0f0f0;
+    border-radius: 50%;
+}
+
+.tag.disponivel{
+    background: #d4edda;
+    color: #155724;
+    border-radius: 5px;
+    padding: 2px 6px;
+}
+
+
+/*Responsividade*/
+
+@media (max-width: 900px) {
+  .filtro-item {
+    min-width: 160px;
+  }
+  .filtro-acoes {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
