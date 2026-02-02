@@ -11,11 +11,16 @@ Todos os estilos gerais do sistema
 /* Variaveis de cores*/
 :root{
     --fonte-principal: 'Inter', sans-serif;
-    --azul-escuro: #00005A;
-    --azul-secundario: #0000bb;
+    --fundo: #f0f0f0;
+    --fundo-cards:#fafafa;
+    --destaque: #00005A;
+    --destaque-secundario: #0000bb;
     --azul-terciario: rgba(29, 29, 87, 0.2);
-    --cinza-fonte: #414141;
-    --cinza-claro: #cacaca;
+    --cor-fonte: #414141;
+    ----cor-fonte-secundaria: #cacaca;
+    --bordas: #cccccc;
+    --branco: rgba(255,255,255);
+    --preto: rgba(0,0,0);
 }
 
 /* Transição para aparecer na tela ao atulizar/abrir */
@@ -106,7 +111,7 @@ body{
     font-weight: normal;
     font-size: 0.75em;
     text-align: center;
-    color: var(--cinza-fonte);
+    color: var(--cor-fonte);
 }
 
 #separador-menu{
@@ -131,7 +136,7 @@ body{
     width: 96%;
     padding: 8px;
     text-decoration: none;
-    color: var(--cinza-fonte);
+    color: var(--cor-fonte);
     font-weight: bold;
     transition: background-color 0.45s ease;
 }
@@ -140,13 +145,13 @@ body{
     background-color: var(--azul-terciario);
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-    border-right: 2px solid var(--azul-secundario);
+    border-right: 2px solid var(--destaque-secundario);
 }
 
 #menu-lateral > nav a:focus{
-    color: var(--azul-secundario);
+    color: var(--destaque-secundario);
     background-color: var(--azul-terciario);
-    border-right: 2px solid var(--azul-secundario);
+    border-right: 2px solid var(--destaque-secundario);
 }
 
 .icon{
@@ -214,7 +219,7 @@ hr{
 
 #logo-search{
     font-size: 1.2em;
-    color: var(--cinza-fonte);
+    color: var(--cor-fonte);
     padding-left: 4px;
 }
 

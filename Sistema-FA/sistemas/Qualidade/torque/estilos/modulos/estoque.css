@@ -84,11 +84,11 @@
     flex-direction: row;
     align-items: center;
     gap: 4px;
-    color: var(--cinza-fonte);
+    color: var(--cor-fonte);
     cursor: pointer;
     border-radius: 5px;
     padding: 6px 13px;
-    background-color: var(--azul-secundario);
+    background-color: var(--destaque-secundario);
     color: white;
 }
 
@@ -158,7 +158,7 @@
 
 
 .btn-adicionar-estoque {
-    background-color: var(--azul-secundario);
+    background-color: var(--destaque-secundario);
     color: white;
     border: none;
     padding: 6px 13px;

@@ -32,11 +32,11 @@
     flex-direction: row;
     align-items: center;
     gap: 4px;
-    color: var(--cinza-fonte);
+    color: var(--cor-fonte);
     cursor: pointer;
     border-radius: 3px;
     padding: 6px 13px;
-    background-color: var(--azul-secundario);
+    background-color: var(--destaque-secundario);
     color: white;
 }
 
@@ -122,7 +122,7 @@
     display: flex;
     flex-direction: column;
     background-color: #ffffff;
-    border: 1px solid #e0e0e0;
+    border: 1px solid #292929;
     border-radius: 8px;
     padding: 15px;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
@@ -136,7 +136,7 @@
     font-size: 1.1em;
     margin-bottom: 10px;
     font-weight: 650;
-    color: var(--cinza-fonte);
+    color: var(--cor-fonte);
     text-align: center;
 }
 
@@ -150,7 +150,7 @@
 .conteudo-cartao > p{
     font-size: 1.7em;
     font-weight: bold;
-    color: var(--azul-secundario);
+    color: var(--destaque-secundario);
     margin-top: 10px;
 }
 
@@ -162,8 +162,8 @@
 }
 
 .cartao-dashboard:hover{
-    border: 1px solid var(--azul-secundario);
-    border-left: 5px solid var(--azul-secundario);
+    border: 1px solid var(--destaque-secundario);
+    border-left: 5px solid var(--destaque-secundario);
 }
 
 
@@ -186,7 +186,7 @@
 #atividades-recentes-dashboard{
     height: 60vh;
     background-color: #ffffff;
-    border: 1px solid #e0e0e0;
+    border: 1px solid #292929;
     border-radius: 8px;
     padding: 15px;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);

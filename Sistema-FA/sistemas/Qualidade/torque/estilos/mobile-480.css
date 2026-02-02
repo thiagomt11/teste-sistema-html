@@ -11,7 +11,7 @@ Dispositivos até 480px (celulares pequenos)
     flex-direction: row;
     align-items: center;
     gap: 4px;
-    border: 1px solid var(--cinza-claro);
+    border: 1px solid var(----cor-fonte-secundaria);
     border-radius: 8px;
     padding: 2px;
     margin: auto;
@@ -26,7 +26,7 @@ Dispositivos até 480px (celulares pequenos)
     background: transparent; 
     border: none;   
     cursor: pointer; 
-    color: var(--cinza-fonte);
+    color: var(--cor-fonte);
     z-index: 10;
     padding: 5px;
 }
@@ -48,7 +48,7 @@ Dispositivos até 480px (celulares pequenos)
     font-weight: normal;
     font-size: 0.65em;
     text-align: center;
-    color: var(--cinza-fonte);
+    color: var(--cor-fonte);
 }
 
 .icon{

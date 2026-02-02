@@ -12,7 +12,7 @@ Dispositivos entre 481px e 768px (tablets e celulares grandes)
     flex: row;
     align-items: center;
     gap: 4px;
-    border: 1px solid var(--cinza-claro);
+    border: 1px solid var(----cor-fonte-secundaria);
     border-radius: 8px;
     padding: 2px;
     margin: auto;
@@ -27,7 +27,7 @@ Dispositivos entre 481px e 768px (tablets e celulares grandes)
     background: transparent; 
     border: none;   
     cursor: pointer; 
-    color: var(--cinza-fonte);
+    color: var(--cor-fonte);
     z-index: 10;
     padding: 5px;
 }
@@ -49,7 +49,7 @@ Dispositivos entre 481px e 768px (tablets e celulares grandes)
     font-weight: normal;
     font-size: 0.65em;
     text-align: center;
-    color: var(--cinza-fonte);
+    color: var(--cor-fonte);
 }
 
 .icon{

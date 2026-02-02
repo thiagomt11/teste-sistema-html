@@ -1,0 +1,227 @@
+
+<!-- Overlay do HISTÓRICO -->
+<div id="overlay"></div>
+
+<header>
+    <div id="cabecalho">
+    <section id="titulo-header">
+        <h1>Gerenciamento de Atividades - Torque</h1>
+        <div id="btns-header">
+        <button id="btn-historico" class="btn">
+            <i class="fa-solid fa-clock-rotate-left"></i> Histórico
+        </button>
+        <p id="btn-adc-atividade" class="btn">
+            <i class="fa-solid fa-plus"></i> Nova Atividade
+        </p>
+        </div>
+    </section>
+
+    <section id="filtro-data">
+        <p><i class="fa-regular fa-calendar"></i> Visualização</p>
+        <ul>
+        <li><button class="btn-data">Hoje</button></li>
+        <li><button class="btn-data">Esta Semana</button></li>
+        <li><button class="btn-data">Este Mês</button></li>
+        <li><button class="btn-data">Todas</button></li>
+        </ul>
+    </section>
+    </div>
+</header>
+
+<main id="colunas">
+    <!-- HISTÓRICO -->
+    <section id="historico">
+    <div id="header-historico">
+        <span>
+        <h1>Histórico de Atividades</h1>
+        <p>Gerencie o historico de atividades</p>
+        </span>
+        <i class="fa-solid fa-x"></i>
+    </div>
+
+    <hr />
+
+    <form action="" method="get" accept-charset="utf-8">
+        <div id="box-filtro-historico">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <hr id="linha-vert-input" />
+        <input
+            type="text"
+            name="filtro-historico"
+            id="filtro-historico"
+            placeholder="Buscar por título, descrição ou responsável..."
+        />
+        </div>
+
+        <article id="select-filtros-historico">
+        <div id="historico-prioridade" class="select-historico">
+            <p><i class="fa-solid fa-flag"></i> Prioridade</p>
+            <select name="select-prioridade" id="select-prioridade">
+            <option>Todas</option>
+            <option>Alta</option>
+            <option>Média</option>
+            <option>Baixa</option>
+            </select>
+        </div>
+
+        <div id="historico-responsavel" class="select-historico">
+            <p><i class="fa-solid fa-user"></i> Responsável</p>
+            <select name="select-responsavel" id="select-responsavel">
+            <option>Todos</option>
+            <option>Eduardo Almeida</option>
+            <option>Erick Prado</option>
+            <option>Rian Guilherme</option>
+            </select>
+        </div>
+
+        <button type="reset" id="btn-limpar-filtros">Limpar Filtros</button>
+        </article>
+    </form>
+
+    <div class="titulo-data">
+        <hr />
+        <p>SEGUNDA-FEIRA, 1 DE JANEIRO DE 2000</p>
+        <hr />
+    </div>
+
+    <div class="card-hist-atividade">
+        <h2>ATV-001</h2>
+        <h3>Título Atividade</h3>
+        <p>Descrição da atividade</p>
+
+        <footer>
+        <p>Rian Guilherme</p>
+        <span class="separador-footer-historico"></span>
+        <p>Analista de Processos</p>
+        <span class="separador-footer-historico"></span>
+        <p>Há 1 dia</p>
+        </footer>
+    </div>
+    </section>
+
+    <!-- COLUNA PENDENTES -->
+    <div class="card" id="card-pendentes">
+    <div class="header-card">
+        <h2>Pendentes</h2>
+        <a href="#" class="adc-atividade" title="Adicionar atividade">
+        <i class="fa-solid fa-plus"></i>
+        </a>
+    </div>
+    </div>
+
+    <!-- COLUNA EM PROGRESSO -->
+    <div class="card" id="card-realizando">
+    <div class="header-card">
+        <h2>Em progresso</h2>
+        <a href="#" class="adc-atividade" title="Adicionar atividade">
+        <i class="fa-solid fa-plus"></i>
+        </a>
+    </div>
+
+    <div class="card-content">
+        <div class="titulo-e-moreinfo">
+        <h3 class="titulo-card-content">Calibração de Alicate</h3>
+        <a href="#" class="more-info" title="Mais opções">
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+        </a>
+        </div>
+        <p class="descricao-card-content">Executar Calibração do Alicate na F-01</p>
+        <div class="user-e-prioridade">
+        <p class="nome-usuario"><i class="fa-solid fa-user"></i> Eduardo Almeida</p>
+        <p class="prioridade baixa">Prioridade Baixa</p>
+        </div>
+    </div>
+    </div>
+
+    <!-- COLUNA FINALIZADAS -->
+    <div class="card" id="card-finalizadas">
+    <div class="header-card">
+        <h2>Finalizadas</h2>
+        <a href="#" class="adc-atividade" title="Adicionar atividade">
+        <i class="fa-solid fa-plus"></i>
+        </a>
+    </div>
+    </div>
+</main>
+
+<!-- ============================= -->
+<!-- MENU PEQUENO (context menu)  -->
+<!-- ============================= -->
+<div id="task-menu" class="task-menu" aria-hidden="true">
+    <button type="button" class="task-menu-btn" data-action="edit">
+    <i class="fa-solid fa-pen"></i> Editar
+    </button>
+    <button type="button" class="task-menu-btn danger" data-action="remove">
+    <i class="fa-solid fa-trash"></i> Remover
+    </button>
+    <button type="button" class="task-menu-btn danger" data-action="details">
+    <i class="fa-solid fa-circle-info"></i> Mais detalhes
+    </button>
+</div>
+
+<!-- ============================= -->
+<!-- MODAL GRANDE (edição)         -->
+<!-- ============================= -->
+<div id="overlay-modal" class="overlay-modal" aria-hidden="true"></div>
+
+<section id="modal-editar" class="modal-editar" aria-hidden="true">
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalEditarTitulo">
+    <header class="modal-header">
+        <h2 id="modalEditarTitulo">Editar atividade</h2>
+        <button id="btn-fechar-modal" type="button" class="modal-close" aria-label="Fechar">
+        <i class="fa-solid fa-x"></i>
+        </button>
+    </header>
+
+    <div class="modal-body">
+        <div class="modal-row">
+        <label for="edit-titulo">Título</label>
+        <input id="edit-titulo" type="text" placeholder="Ex: Escreva o título da atividade..." />
+        </div>
+
+        <div class="modal-row">
+        <label for="edit-descricao">Descrição</label>
+        <textarea id="edit-descricao" placeholder="Descreva a atividade..."></textarea>
+        </div>
+
+        <div class="modal-row">
+        <label for="edit-responsavel">Responsável</label>
+        <select id="edit-responsavel">
+            <option value="Rian Guilherme" selected="Rian Guilherme">Rian Guilherme</option>
+            <option value="Eduardo Almeida">Eduardo Almeida</option>
+            <option value="Erick Prado">Erick Prado</option>
+        </select>
+        </div>
+
+        <div class="modal-row">
+        <label for="edit-prioridade">Prioridade</label>
+        <div id="edit-prioridade">
+            <button value="baixa">Baixa</button>
+            <button value="media">Média</button>
+            <button value="alta">Alta</button>
+        </div>
+        </div>
+        
+        <div class="modal-row">
+        <label for="edit-checklist">Checklist</label>
+        <div id="edit-checklist">
+            <div id="progresso-checklist">
+            <p>Progresso</p>
+            <button type="submit">Adicionar</button>
+            </div>
+            <div class="barra-checklist">
+            <div class="progresso" style="width: 80%"> </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <footer class="modal-footer">
+        <button id="btn-cancelar-modal" type="button" class="btn-sec">Cancelar</button>
+        <button id="btn-salvar-modal" type="button" class="btn-pri">Salvar</button>
+    </footer>
+    </div>
+</section>
+
+
+
