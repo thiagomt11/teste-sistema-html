@@ -599,3 +599,22 @@ function atualizarMenuAtivo(paginaAtual){
     link.classList.toggle("ativo", page === paginaAtual);
   })
 }
+
+window.alternarFiltroMenuUsuarioFooter = function (){
+  const menu = document.getElementById("menu-usuario-footer");
+  if (!menu) return;
+  menu.classList.toggle("footer-ativo");
+}
+
+
+document.addEventListener("click", function(abrir_menu){
+  const menuUsuarioFooter = document.getElementById("menu-usuario-footer");
+  const btnMenuUsuario = document.getElementById("usuario-footer-menu-lateral");
+
+  if (menuUsuarioFooter && menuUsuarioFooter.classList.contains("footer-ativo")){
+    const clicouNoBtnMenuUsuario = btnMenuUsuario ? btnMenuUsuario.contains(abrir_menu.target) : false;
+    if(!menuUsuarioFooter.contains(abrir_menu.target) && !clicouNoBtnMenuUsuario){
+      menuUsuarioFooter.classList.remove("footer-ativo");
+    }
+  }
+});

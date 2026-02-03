@@ -172,8 +172,13 @@ body{
 #footer-menu-lateral{
     margin-top: auto;
     padding: 15px;
+    
     display: flex;
+    flex-direction: column-reverse;
     justify-content: center;
+    align-items: center;
+
+    gap: 3px;
 }
 
 #usuario-footer-menu-lateral{
@@ -202,6 +207,31 @@ body{
     cursor: pointer;
     background-color: var(--fundo);
 }
+
+#menu-usuario-footer{
+    background-color: var(--fundo);
+    border: 1px solid var(--bordas);
+    border-radius: 5px;
+    width: 90%;
+    display: none;
+}
+
+#menu-usuario-footer.footer-ativo{
+    display: block;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+#menu-usuario-footer > p{
+    padding: 12px 10px;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+#menu-usuario-footer > p:hover{
+    cursor: pointer;
+    background-color: var(--branco);
+}
+
 
 /* Conteúdo principal */
 
