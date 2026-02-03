@@ -4,18 +4,6 @@
  Desktop styles - Para telas maiores que 1280px
  */
 
-.search-box{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 4px;
-    border: 1px solid var(--cor-fonte-secundaria);
-    border-radius: 8px;
-    padding: 2px;
-    margin: auto;
-    width: 45%;
-}
-
 /* Deixar menu lateral fixo*/
 #menu-lateral {
     width: 300px !important;
@@ -28,8 +16,8 @@
 }
 
 #principal {
-    margin-left: 310px;
-    background-color: rgba(202, 231, 250, 0.147);
+    margin-left: 300px;
+    background-color: var(--fundo);
 }
 
 #btn-menu {
@@ -39,7 +27,6 @@
 /*Tira o blur*/
 #principal {
     filter: none !important;
-    background-color: rgba(202, 231, 250, 0.147);
   }
 
 /*Aumenta o tamanho dos ícones e textos do menu lateral abaixo do cabeçalho*/

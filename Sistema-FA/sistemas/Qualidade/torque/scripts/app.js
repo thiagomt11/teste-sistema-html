@@ -52,6 +52,7 @@ window.carregarConteudo = function (arquivo) {
     .then((html) => {
       container.innerHTML = html;
 
+      atualizarMenuAtivo(arquivo);
       // ✅ sempre que troca de tela, re-inicializa recursos daquela tela
       setupTelaCarregada();
     })
@@ -60,6 +61,9 @@ window.carregarConteudo = function (arquivo) {
       container.innerHTML =
         '<p style="color:red; padding:20px;">Erro ao carregar o conteúdo. Verifique o console (F12).</p>';
     });
+
+
+    
 };
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -584,4 +588,14 @@ function setupBotoesFiltroAtividades() {
 
   document.addEventListener("click", onClickBtnData);
   cleanupFns.push(() => document.removeEventListener("click", onClickBtnData));
+}
+
+
+function atualizarMenuAtivo(paginaAtual){
+  const linksMenu = document.querySelectorAll("#menu-lateral a[data-page]");
+
+  linksMenu.forEach((link) =>{
+    const page = link.getAttribute("data-page")
+    link.classList.toggle("ativo", page === paginaAtual);
+  })
 }

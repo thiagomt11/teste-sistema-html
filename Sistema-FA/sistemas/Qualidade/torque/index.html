@@ -23,75 +23,76 @@
     <link rel="stylesheet" href="estilos/modulos/estoque.css" />
     <link rel="stylesheet" href="estilos/modulos/linha.css" />
     
-    <!-- Importação de ícones do Google Material Symbols -->
+    <!-- Importação de ícones do Google Material Symbols e Font Awesome -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" rel="stylesheet" >
 </head>
 
 <body>
     <!-- Menu lateral -->
     <aside id="menu-lateral" class="menu-oculto">
         
-        <!-- Cabeçalho do menu lateral, contendo a foto, nome e outras informações do usuário -->
+        <!-- Cabeçalho do menu lateral -->
 
+        <!-- Botão para fechar menu em resoluções menores que 992px-->
         <button id="btn-fechar" onclick="abrirMenu()">
             <span class="material-symbols-outlined">close</span>
         </button>
 
         <div id="cabecalho-menu">
-                <a href="#">
-                    <img src="imagens/user.jpg" alt="Foto do Usuário" id="foto-usuario"/>
-                </a>
-            <span>
-                <p id="nome">Thiago Martins</p> 
-                <p id="funcao">Assistente de Processos</p>
-            </span>
+            <p><i class="fa-solid fa-screwdriver-wrench"></i> TORQUE TEAM</p> 
         </div>
         
         <hr id="separador-menu"/>
         <!-- Itens do menu lateral, para acessar o menu principal, estoque, menu de calibração, relatoório etc. -->
         <nav>
-            <a href="#" onclick="carregarConteudo('dashboard.html'); return false;">
+            <a href="#" data-page="dashboard.html" onclick="carregarConteudo('dashboard.html'); return false;">
                 <div class="icon">
                     <span class="material-symbols-outlined">bar_chart</span>
                     <span>Dashboard</span>
                 </div>
             </a>
 
-            <a href="#" onclick="carregarConteudo('ferramentas.html'); return false;">
+            <a href="#" data-page="ferramentas.html" onclick="carregarConteudo('ferramentas.html'); return false;">
                 <div class="icon">
                     <span class="material-symbols-outlined">build</span>
                     <span>Controle de Ferramentas</span>
                 </div>
             </a>
             
-            <a href="#" onclick="carregarConteudo('atividades.html'); return false;">
+            <a href="#" data-page="atividades.html" onclick="carregarConteudo('atividades.html'); return false;">
                 <div class="icon">
                     <span class="material-symbols-outlined">Assignment</span>
                     <span>Atividades</span>
                 </div>
             </a>
 
-            <a href="#" onclick="carregarConteudo('relatorios.html'); return false;">
+            <a href="#" data-page="relatorios.html" onclick="carregarConteudo('relatorios.html'); return false;">
                 <div class="icon">
                     <span class="material-symbols-outlined">Article</span>
                     <span>Relatórios</span>
                 </div>
             </a>
 
-            <a href="#" onclick="carregarConteudo('requisicoes.html'); return false;">
+            <a href="#" data-page="requisicoes.html" onclick="carregarConteudo('requisicoes.html'); return false;">
                 <div class="icon">
                     <span class="material-symbols-outlined">Attach_Money</span>
                     <span>Requisições de Compra</span>
                 </div>
             </a>
 
-            <a href="#" onclick="carregarConteudo('toolsnet.html'); return false;">
+            <a href="#" data-page="toolsnet.html" onclick="carregarConteudo('toolsnet.html'); return false;">
                 <div class="icon">
                     <span class="material-symbols-outlined">Database</span>
                     <span>ToolsNet</span>
                 </div>
             </a>
         </nav>
+
+        <section id="footer-menu-lateral">
+            <p id="nome">Thiago Martins</p> 
+            <p id="funcao">Assistente de Processos</p>
+        </section>
     </aside>
 
     <!-- Div principal que contém o cabeçalho e o conteúdo principal da página -->

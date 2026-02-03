@@ -13,11 +13,11 @@ Todos os estilos gerais do sistema
     --fonte-principal: 'Inter', sans-serif;
     --fundo: #f0f0f0;
     --fundo-cards:#fafafa;
-    --destaque: #00005A;
-    --destaque-secundario: #0000bb;
-    --azul-terciario: rgba(29, 29, 87, 0.2);
-    --cor-fonte: #414141;
-    --cor-fonte-secundaria: #cacaca;
+    --destaque: #001570;
+    --destaque-secundario: #3249fa;
+    --destaque-transparente: rgba(39, 64, 255, 0.2);
+    --cor-fonte: #292929;
+    --cor-fonte-secundaria: #707070;
     --bordas: #cccccc;
     --branco: rgba(255,255,255);
     --preto: rgba(0,0,0);
@@ -48,15 +48,15 @@ body{
     flex-direction: row;
     animation: aparecer 0.4s ease-in-out;
     overflow-x: hidden;
-    background-color: rgba(202, 231, 250, 0.147);
+    background-color: var(--fundo);
 }
 
 /* Menu lateral */
 #menu-lateral{
     width: 220px;
     height: 100vh;
-    background-color: #fafafa;
-    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.25);
+    background-color: var(--fundo-cards);
+    box-shadow: 1px 1px 8px rgba(0,0,0, 0.25);
 
     /*I.A*/
     transition: width 0.45s ease-in-out; /* Animação suave de 0.45 segundos */
@@ -70,6 +70,9 @@ body{
     
     /* Z-index alto garante que ele fique na frente de tudo (tabelas, textos, imagens) */
     z-index: 1000;
+
+    display: flex;
+    flex-direction: column;
     
 }
 
@@ -83,22 +86,20 @@ body{
 /* Cabeçalho do menu lateral (Foto e nome) */
 #cabecalho-menu{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    gap: 5px;
-}
-
-#cabecalho-menu > a{
-    display: flex;
     justify-content: center;
-    text-decoration: none;
-}
+    gap: 10px;
+    margin: 25px auto 25px auto;
 
-#foto-usuario{
-    margin-top: 10px;
-    width: 45%;
-    height: auto;
-    border-radius: 50%;
+    font-weight: bold;
+    font-size: 1.65em;
+    
+    background-image: linear-gradient(to right, var(--destaque), #0028DB, #002BEB);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
 }
 
 #nome{
@@ -127,31 +128,37 @@ body{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-top: 5px;
+    gap: 5px;
+    margin-top: 25px;
 }
 
 #menu-lateral > nav a{
     display: block;
-    margin: 2px auto;
-    width: 96%;
-    padding: 8px;
+    margin: auto;
+    width: 85%;
+    padding: 11px 8px;
     text-decoration: none;
     color: var(--cor-fonte);
+    font-size: 1em;
     font-weight: bold;
-    transition: background-color 0.45s ease;
+    background-color: var(--fundo);
+    border: 1px solid var(--bordas);
+    border-radius: 10px;
+    transition: background-color 0.45s ease, transform 0.3s ease-in-out;
 }
 
 #menu-lateral > nav a:hover{
-    background-color: var(--azul-terciario);
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    border-right: 2px solid var(--destaque-secundario);
+    background-color: var(--destaque-transparente);
+    transform: translateX(5px);
 }
 
-#menu-lateral > nav a:focus{
+#menu-lateral > nav a.ativo{
     color: var(--destaque-secundario);
-    background-color: var(--azul-terciario);
-    border-right: 2px solid var(--destaque-secundario);
+    background-color: var(--destaque-transparente);
+    border-left: 3px solid var(--destaque-secundario);
+    border-right: var(--destaque-transparente);
+    border-top: var(--destaque-transparente);
+    border-bottom: var(--destaque-transparente);
 }
 
 .icon{
@@ -160,6 +167,10 @@ body{
     align-items: center;
     gap: 3px;
     font-size: 0.9em;
+}
+
+#footer-menu-lateral{
+    margin-top: auto;
 }
 
 /* Conteúdo principal */
@@ -177,7 +188,7 @@ body{
     min-width: 0;
     flex: 1;
     transition: filter 0.3s ease;
-    background-color: rgba(202, 231, 250, 0.147);
+    background-color: var(--fundo)
 }
 
 body.menu-aberto #principal{

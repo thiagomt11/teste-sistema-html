@@ -15,17 +15,17 @@
 /* Cabeçalho do Módulo */
 .content-header {
     margin-bottom: 30px;
-    border-bottom: 1px solid var(--cor-fonte-secundaria, #cacaca);
+    border-bottom: 1px solid var(--bordas);
     padding-bottom: 10px;
 }
 
 .content-header h1 {
-    color: var(--destaque, #00005A);
+    color: var(--destaque);
     font-size: 1.8rem;
 }
 
 .subtitle {
-    color: var(--cor-fonte, #414141);
+    color: var(--cor-fonte);
     font-size: 0.9rem;
     margin-top: 5px;
 }
@@ -44,8 +44,8 @@
 
 /* Estilo dos Cards */
 .option-card {
-    background-color: #ffffff;
-    border: 1px solid #292929;
+    background-color: var(--fundo-cards);
+    border: 1px solid var(--bordas);
     border-radius: 12px;
     padding: 25px;
     cursor: pointer;
@@ -63,7 +63,7 @@
 .option-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 90, 0.15);
-    border-color: var(--destaque-secundario, #0000bb);
+    border-color: var(--destaque-secundario);
 }
 
 /* Detalhe visual na borda esquerda */
@@ -74,7 +74,7 @@
     top: 0;
     height: 100%;
     width: 5px;
-    background-color: var(--destaque, #00005A);
+    background-color: var(--destaque);
     opacity: 0;
     transition: opacity 0.3s ease;
 }
@@ -85,7 +85,6 @@
 
 /* Ícones */
 .ferr-icon {
-    background-color: var(--azul-terciario, rgba(0, 0, 0, 0.1));
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -93,23 +92,24 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 15px;
+    background-color: rgba(0,0,0, 0.1);
 }
 
 .ferr-icon .material-symbols-outlined {
     font-size: 32px;
-    color: var(--destaque, #00005A);
+    color: var(--destaque);
 }
 
 /* Textos do Card */
 .card-info h2 {
     font-size: 1.4rem;
-    color: var(--destaque, #00005A);
+    color: var(--destaque);
     margin-bottom: 8px;
 }
 
 .card-info p {
     font-size: 0.9rem;
-    color: var(--cor-fonte, #666);
+    color: var(--cor-fonte);
     line-height: 1.5;
 }
 
@@ -119,7 +119,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    color: var(--destaque-secundario, #0000bb);
+    color: var(--destaque);
     font-weight: bold;
     font-size: 0.9rem;
 }
