@@ -21,6 +21,13 @@
     margin-bottom: 20px;
 }
 
+#titulo-dashboard > h1{
+    color: var(--cor-fonte);
+}
+
+h2{
+    color: var(--cor-fonte);
+}
 /*------ Filtros ------*/
 #filtros-dashboard {
     position: relative;
@@ -300,6 +307,7 @@
     
     #titulo-dashboard > h1{
         font-size: 1.5em;
+        color: var(--destaque);
     }
     
     #dashboard-operacional{

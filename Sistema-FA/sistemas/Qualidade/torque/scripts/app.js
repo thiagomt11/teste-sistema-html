@@ -602,19 +602,47 @@ function atualizarMenuAtivo(paginaAtual){
 
 window.alternarFiltroMenuUsuarioFooter = function (){
   const menu = document.getElementById("menu-usuario-footer");
-  if (!menu) return;
-  menu.classList.toggle("footer-ativo");
-}
+  const wrapper = document.getElementById("usuario-footer-menu-lateral");
+  
+  if (!menu || !wrapper) return;
+  
+  const ativo = menu.classList.toggle("footer-ativo");
+
+  wrapper.classList.toggle("menu-usuario-aberto", ativo);
+};
 
 
 document.addEventListener("click", function(abrir_menu){
   const menuUsuarioFooter = document.getElementById("menu-usuario-footer");
   const btnMenuUsuario = document.getElementById("usuario-footer-menu-lateral");
-
   if (menuUsuarioFooter && menuUsuarioFooter.classList.contains("footer-ativo")){
     const clicouNoBtnMenuUsuario = btnMenuUsuario ? btnMenuUsuario.contains(abrir_menu.target) : false;
     if(!menuUsuarioFooter.contains(abrir_menu.target) && !clicouNoBtnMenuUsuario){
       menuUsuarioFooter.classList.remove("footer-ativo");
     }
   }
+});
+
+
+const botao = document.getElementById('botao-toggle-modo');
+const body = document.body;
+
+const temasalvo = localStorage.getItem('tema');
+temaEscuro(temasalvo === 'escuro');
+
+function temaEscuro(tipo){
+    if (tipo){
+        body.classList.add('escuro');
+        botao.innerHTML = '<i class="fas fa-sun"></i> Modo Claro';
+    }
+    else{
+        body.classList.remove('escuro');
+        botao.innerHTML = '<i class="fas fa-moon"></i> Modo Escuro';
+    }
+}
+
+botao.addEventListener('click', () => {
+    const isescuro = body.classList.toggle('escuro');
+    temaEscuro(isescuro);
+    localStorage.setItem('tema', isescuro ? 'escuro' : 'claro');
 });

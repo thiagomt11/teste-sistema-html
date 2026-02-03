@@ -51,6 +51,20 @@ body{
     background-color: var(--fundo);
 }
 
+body.escuro{
+    --fundo:#121212;
+    --fundo-cards: #1e1e1e;
+    --destaque: #FF5D00;
+    --destaque-secundario: #FF8D01;
+    --destaque-transparente: #ff990041;
+    --cor-fonte: #EAEAEA;
+    --cor-fonte-secundaria: #A0A0A0;
+    --bordas: #2A2A2A;
+    --preto: #fff;
+    --branco: #000;
+    
+}
+
 /* Menu lateral */
 #menu-lateral{
     width: 220px;
@@ -95,7 +109,7 @@ body{
     font-weight: bold;
     font-size: 1.65em;
     
-    background-image: linear-gradient(to right, var(--destaque), #0028DB, #002BEB);
+    background-image: linear-gradient(to right, var(--destaque), var(--destaque-secundario));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -106,6 +120,7 @@ body{
     font-weight: bold;
     font-size: 1.15em;
     text-align: center;
+    color: var(--cor-fonte);
 }
 
 #funcao{
@@ -172,28 +187,51 @@ body{
 #footer-menu-lateral{
     margin-top: auto;
     padding: 15px;
-    
     display: flex;
-    flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
-
+    flex-direction: column;
     gap: 3px;
 }
 
 #usuario-footer-menu-lateral{
+    position: relative;
+    
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 
-    width: 90%;
+    width: 100%;
 
     border: 1px solid var(--bordas);
     border-radius: 10px;
     padding: 10px;
 
     transition: background-color 0.2s ease-in-out;
+}
+
+#usuario-footer-menu-lateral > i{
+    color: var(--preto);
+}
+
+#usuario-footer-menu-lateral:hover{
+    cursor: pointer;
+    background-color: var(--fundo);
+}
+
+#menu-usuario-footer{
+    position: absolute;
+
+    bottom: calc(100% + 6px);
+    left: 0;
+
+    background-color: var(--fundo);
+    border: 1px solid var(--bordas);
+    border-radius: 10px;
+    width: 100%;
+
+    display: none;
+    z-index: 999;
+    overflow: hidden;
 }
 
 #nome-funcao-footer-menu-lateral{
@@ -203,34 +241,43 @@ body{
     align-items: flex-start;
 }
 
-#usuario-footer-menu-lateral:hover{
-    cursor: pointer;
-    background-color: var(--fundo);
-}
-
-#menu-usuario-footer{
-    background-color: var(--fundo);
-    border: 1px solid var(--bordas);
-    border-radius: 5px;
-    width: 90%;
-    display: none;
+@keyframes subir{
+    from{
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 #menu-usuario-footer.footer-ativo{
     display: block;
-    animation: fadeIn 0.3s ease-in-out;
+    animation: subir 0.3s ease-in;
 }
+
+#seta-para-cima {
+    transition: transform 0.2s ease;
+}
+  
+.menu-usuario-aberto #seta-para-cima {
+    transform: rotate(180deg);
+}
+  
 
 #menu-usuario-footer > p{
     padding: 12px 10px;
     font-size: 1.1em;
     font-weight: 500;
+    color: var(--preto);
 }
 
 #menu-usuario-footer > p:hover{
     cursor: pointer;
     background-color: var(--branco);
 }
+
 
 
 /* Conteúdo principal */
