@@ -6,17 +6,6 @@ Conceito de Mobile First - Primeiro desenvolvemos para mobile e depois para desk
 Dispositivos até 480px (celulares pequenos)
 */
 
-.search-box{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 4px;
-    border: 1px solid var(--bordas);
-    border-radius: 8px;
-    padding: 2px;
-    margin: auto;
-    width: 90%;
-}
 
 /* Botão de fechar do menu lateral */
 #btn-fechar {
@@ -49,6 +38,10 @@ Dispositivos até 480px (celulares pequenos)
     font-size: 0.65em;
     text-align: center;
     color: var(--cor-fonte);
+}
+
+#cabecalho-menu{
+    font-size: 1.15em;
 }
 
 .icon{

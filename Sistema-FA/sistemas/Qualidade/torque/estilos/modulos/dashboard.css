@@ -44,7 +44,7 @@ h2{
     cursor: pointer;
     border-radius: 3px;
     padding: 6px 13px;
-    background-color: var(--destaque-secundario);
+    background-color: var(--destaque);
     color: white;
 }
 

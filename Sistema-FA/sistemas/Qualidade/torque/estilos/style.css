@@ -77,12 +77,10 @@ body.escuro{
     overflow: hidden;            /* Esconde o texto/ícones quando o menu encolher */
     white-space: nowrap;         /* Impede que o texto quebre linha ao encolher */
 
-    /* Deixe de usar relative e use fixed */
     position: fixed; 
     top: 0;
     left: 0;
     
-    /* Z-index alto garante que ele fique na frente de tudo (tabelas, textos, imagens) */
     z-index: 1000;
 
     display: flex;
@@ -143,7 +141,7 @@ body.escuro{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 8px;
+    gap: 10px;
     margin-top: 25px;
 }
 
@@ -158,7 +156,7 @@ body.escuro{
     font-weight: bold;
     background-color: var(--fundo);
     border-radius: 7px;
-    box-shadow:  0px 2px 8px rgba(0, 0, 0, 0.2);
+    box-shadow:  0px 1px 5px rgba(0, 0, 0, 0.2);
     transition: background-color 0.45s ease, transform 0.3s ease-in-out;
 }
 

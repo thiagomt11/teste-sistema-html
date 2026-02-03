@@ -7,17 +7,7 @@ Dispositivos entre 481px e 768px (tablets e celulares grandes)
 */
 
 
-.search-box{
-    display: flex;
-    flex: row;
-    align-items: center;
-    gap: 4px;
-    border: 1px solid var(--bordas);
-    border-radius: 8px;
-    padding: 2px;
-    margin: auto;
-    width:70%;
-}
+
 
 /* Botão de fechar do menu lateral */
 #btn-fechar {
@@ -50,6 +40,10 @@ Dispositivos entre 481px e 768px (tablets e celulares grandes)
     font-size: 0.65em;
     text-align: center;
     color: var(--cor-fonte);
+}
+
+#cabecalho-menu{
+    font-size: 1em;
 }
 
 .icon{
