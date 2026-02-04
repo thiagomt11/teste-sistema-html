@@ -13,14 +13,17 @@ Todos os estilos gerais do sistema
     --fonte-principal: 'Inter', sans-serif;
     --fundo: #f0f0f0;
     --fundo-cards:#fafafa;
-    --destaque: #001570;
-    --destaque-secundario: #3249fa;
+    --destaque: #0025CC;
+    --destaque-secundario: #213bfc;
     --destaque-transparente: rgba(39, 64, 255, 0.2);
     --cor-fonte: #292929;
     --cor-fonte-secundaria: #707070;
     --bordas: #cccccc;
     --branco: rgba(255,255,255);
     --preto: rgba(0,0,0);
+
+    /*Variaveis pontuais*/
+    --destaque-escuro: #001570;
 }
 
 /* Transição para aparecer na tela ao atulizar/abrir */
@@ -53,7 +56,7 @@ body{
 
 body.escuro{
     --fundo:#121212;
-    --fundo-cards: #1e1e1e;
+    --fundo-cards: #292929;
     --destaque: #FF5D00;
     --destaque-secundario: #FF8D01;
     --destaque-transparente: #ff990041;
@@ -63,6 +66,8 @@ body.escuro{
     --preto: #fff;
     --branco: #000;
     
+    /*Variáveis pontuais*/
+    --destaque-escuro: #E35300; 
 }
 
 /* Menu lateral */
@@ -77,10 +82,12 @@ body.escuro{
     overflow: hidden;            /* Esconde o texto/ícones quando o menu encolher */
     white-space: nowrap;         /* Impede que o texto quebre linha ao encolher */
 
+    /* Deixe de usar relative e use fixed */
     position: fixed; 
     top: 0;
     left: 0;
     
+    /* Z-index alto garante que ele fique na frente de tudo (tabelas, textos, imagens) */
     z-index: 1000;
 
     display: flex;
@@ -107,7 +114,7 @@ body.escuro{
     font-weight: bold;
     font-size: 1.65em;
     
-    background-image: linear-gradient(to right, var(--destaque), var(--destaque-secundario));
+    background-image: linear-gradient(to right, var(--destaque-escuro), var(--destaque), var(--destaque-secundario));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -141,22 +148,22 @@ body.escuro{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 10px;
-    margin-top: 25px;
+    gap: 8px;
+    margin-top: 20px;
 }
 
 #menu-lateral > nav a{
     display: block;
     margin: auto;
     width: 85%;
-    padding: 11px 8px;
+    padding: 8px;
     text-decoration: none;
     color: var(--cor-fonte);
     font-size: 1em;
-    font-weight: bold;
-    background-color: var(--fundo);
+    font-weight: bold; 
     border-radius: 7px;
-    box-shadow:  0px 1px 5px rgba(0, 0, 0, 0.2);
+    /*background-color: var(--fundo);
+    box-shadow:  0px 2px 8px rgba(0, 0, 0, 0.2);*/
     transition: background-color 0.45s ease, transform 0.3s ease-in-out;
 }
 

@@ -7,30 +7,50 @@
                 <p class="subtitulo-estoque">Gerencie o inventário e status de calibração.</p>
             </div>
         </div>
+
+                
+        <section id="cards-estoque">
+            <div class="card-estoque">
+                TESTE
+            </div>
+            <div class="card-estoque">
+                TESTE1
+            </div>
+            <div class="card-estoque">
+                TESTE2
+            </div>
+        </section>
         
-        <section class="filtros-estoque">
+        
+        <section id="btns-acoes-estoque">
+
+            <!-- Input para filtros-->
             <div class="input-filtrar-estoque">
                 <label for="search-serial-estoque"><span class="material-symbols-outlined" id="logo-search-estoque">search</span></label>
                 <input type="text" placeholder="Buscar por serial..." id="search-serial-estoque">
             </div>
 
-            <div class="filtro-e-add-estoque">
-                <!-- Botão de Filtros Avançados-->
-                <div id="filtros-avancados-estoque">
-                    <div id="btn-filtro-estoque" onclick="alternarFiltroEstoque()">
-                        <button type="button" class="icon-filtro-estoque">
-                            <span class="material-symbols-outlined">Filter_List</span>
-                        </button>
-                        <span>Filtros Avançados</span>
-                    </div>
-                </div>
-                
-                <!-- Botão Adicionar Ferramenta-->
-                <button class="btn-adicionar-estoque">
-                    <span class="material-symbols-outlined">add</span>
-                    Nova Ferramenta
-                </button>
-            </div>
+            <!------------------- Botões de Ações ---------------->
+            <!-- Botão de Filtros Avançados-->
+            <button type="button" class="btns-estoque" id="btn-filtro-estoque" onclick="alternarFiltroEstoque()">
+                <p><i class="fa-solid fa-filter"></i> Filtros Avançados</p>
+            </button>
+
+            <!-- Botão Adicionar Ferramenta-->
+            <button class="btns-estoque">
+                <p><i class="fa-solid fa-plus"></i> Nova Ferramenta</p>
+            </button>
+        
+            <!-- Botão Movimentar Ferramenta-->
+            <button class="btns-estoque">
+                <p><i class="fa-solid fa-arrow-right-arrow-left"></i> Movimentar Ferramenta</p>
+            </button>
+            
+            <!-- Botão Empréstimos-->
+            <button class="btns-estoque">
+                <p><i class="fa-solid fa-handshake-angle"></i> Empréstimos</p>
+            </button>
+
         </section>
 
         <!-- Conteúdo do Filtro Avançado -->
@@ -78,14 +98,15 @@
             </div>
         </section>
     </header>
-
+    
     <main>
+
         <table class="tabela-estoque">
             <thead>
                 <tr>
                     <th>Serial</th>
                     <th>Modelo</th>
-                    <th>Status</th>
+                    <th>Descrição</th>
                     <th>Ações</th>
                 </tr>
             </thead>
