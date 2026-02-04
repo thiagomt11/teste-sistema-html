@@ -34,7 +34,19 @@
     box-shadow: 1px 1px 6px rgba(0,0,0,0.2);
     border-radius: 8px;
     width: 300px;
-    height: 100px;
+    height: 105px;
+    color: var(--cor-fonte);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.card-estoque > p {
+    font-size: 2em;
+    font-weight: bold;
+    color: var(--destaque);
+    align-self: center;
 }
 
 
@@ -175,14 +187,16 @@
     box-sizing: border-box;
 }
 
-.tabela-estoque th {
+.tabela-estoque thead tr th {
     padding: 15px 8px;
     text-align: left;
+    color: white; /*Cor fixa devido ao fundo*/
 }
 
 .tabela-estoque td{
     border-bottom: 1px solid var(--bordas);
     padding: 12px 8px;
+    color: var(--cor-fonte);
 }
 
 .tabela-estoque th {
