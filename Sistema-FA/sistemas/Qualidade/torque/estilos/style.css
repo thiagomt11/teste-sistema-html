@@ -330,7 +330,7 @@ body.menu-aberto #principal{
     width: 100%;
 }
 
-hr{
+#search-serial hr{
     width:1px; 
     height:20px; 
     display:inline-block;

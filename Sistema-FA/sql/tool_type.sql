@@ -1,0 +1,6 @@
+CREATE TABLE tool_type(
+	id INT PRIMARY KEY,
+  	name VARCHAR(250) UNIQUE NOT NULL
+);
+
+

@@ -1,0 +1,36 @@
+#pagina-linha {
+    padding: 20px;
+    animation: aparecer 0.5s ease-out;
+}
+
+.titulo-linha {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.titulo-linha h2 {
+    margin: 0;
+    color: var(--cor-fonte);
+}
+
+.subtitulo-linha{
+    color: var(--cor-fonte-secundaria);
+    font-size: 14px;
+}
+
+.linhas{
+    background-color: var(--fundo-cards);
+    width: 100%;
+    height: 25vh;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 20px;
+    border: 1px solid var(--bordas);
+}
+
+.titulo-card-linhas > hr{
+    height: 2px;
+    width: 100%;
+    margin-top: 3px;
+}
